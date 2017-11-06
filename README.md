@@ -5,21 +5,11 @@
 ```
 let feathersRules = require('stealify-feathers/rules')
 
-require('stealify-debug')({
+config = {
   Replacement: 'stealbase', // require('package.json').name
   rules: [[strMatch,'Replacment'],[strMatch,'Replacment'],feathersRules],
-})
-
-require('stealify-console')({
-  Replacement: 'stealbase', // require('package.json').name
-  rules: [[strMatch,'Replacment'],[strMatch,'Replacment'],feathersRules],
-})
-
-require('stealify-process')({
-  Replacement: 'stealbase', // require('package.json').name
-  rules: [[strMatch,'Replacment'],[strMatch,'Replacment'],feathersRules],
-})
-
-return require('feathers')
+}
+// default replacement is package.name default rules are feathersRules
+return require('stealify-feathers')()
 
 ```
